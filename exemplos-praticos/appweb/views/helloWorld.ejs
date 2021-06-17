@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Curso JS</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <style>
+        .bg-purple-light{
+            background-color: #474787;
+            color: whitesmoke;
+            box-shadow: 5px 5px 5px black;
+        }
+    </style>
+</head>
+<body>
+    <%- include("navbar"); -%>
+    <div class="container text-center jumbotron bg-purple-light" style="margin-top: 70px;">
+        <h2>Hello World</h2>
+        <hr>
+        <p class="lead" id="instrucao">Clique no Botão abaixo e veja a mágica acontecer!</p>
+        <button class="btn btn-light" type="button" id="start" style="font-weight: 500;">
+            Começar
+        </button>
+    </div>
+
+    <div class="container" id="imgHello">
+        <center>
+            <p>O <b>alert </b> emitido foi feito pelo código javascript abaixo: </p>
+            <img src="../img/helloWorld.png" alt="" class="img-fluid">
+        </center>
+    </div>
+
+    <%- include("scripts"); -%>
+    <script>
+        let start = document.getElementById("start")
+        let msg = document.getElementById("instrucao")
+        let imgHello = document.getElementById("imgHello")
+
+        imgHello.style.display = 'none'
+
+        start.onclick = () =>{
+
+            alert("Parabéns você está entrando pro 'Mundo JS'")
+            alert('"Hello World JS"')
+
+
+            imgHello.style.display = 'block'
+            start.remove()
+            msg.remove()
+        }
+    </script>
+</body>
+</html>

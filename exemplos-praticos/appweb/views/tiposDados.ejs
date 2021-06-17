@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Curso JS - Tipos de Dados</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <style>
+        .bg-purple-light{
+            background-color: #474787;
+            color: whitesmoke;
+            box-shadow: 5px 5px 5px black;
+        }
+    </style>
+</head>
+<body>
+    <%- include("navbar"); -%>
+    <div class="container  jumbotron bg-purple-light" style="margin-top: 70px;">
+        <h2>Tipos de Dados com JavaScript</h2>
+        <hr>
+        <p class="lead" id="instrucao">
+            Os tipos de dados na linguagem de programação JavaScript são:
+        </p>
+        <div class="container">
+            <table class="table table-hover text-left table-bordered">
+                <thead class="bg-dark">
+                    <th>Tipos</th>
+                    <th>Exemplos</th>
+                    <th>Conceito</th>
+                </thead>
+                <tbody class="bg-light text-dark">
+                    <tr>
+                        <td>String</td>
+                        <td>
+                            let nome = <b>"Eduardo"</b>
+                        </td>
+                        <td>
+                            Toda variável do tipo String, é declarada entre aspas simples ou duplas. <br>
+                            Na versão nova do <b>ECMAScript</b> pode usa-se o template string ``.
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Number</td>
+                        <td>
+                            let valorNum = <b>102</b> <br>
+                            let valorPI = <b>3.14</b>
+                        </td>
+                        <td>
+                            Variável do tipo <b>Number</b>, é declarada de forma intepretativa, onde pode ser <br>
+                            do tipo <b>inteiro (valorNum)</b> ou <b>float (valorPI)</b> com ponto flutuante. <br> 
+                            O javascript entende o tipo de valor numerico de acordo o valor declarado.
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>Boolean</td>
+                        <td>
+                            let ceuAzul = <b>true</b>
+                        </td>
+                        <td>
+                            Para variáveis do tipo <b>Boolean</b>, temos dos valores padrão: <b>true ou false</b>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>Null</td>
+                        <td>
+                            let vazio = <b>null</b>
+                        </td>
+                        <td>
+                            Do tipo <b>Null</b>, é um variável com valor esplícito de null (nulo).
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>Undefined</td>
+                        <td>
+                            let varIndefinida
+                        </td>
+                        <td>
+                           Variável que não foi atribuída um valor específico, assume o valor de <b>undefined</b>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <br>
+        
+        <!-- Button trigger modal -->
+        <center>
+            <button type="button" class="btn btn-dark" data-toggle="modal" data-target="#exampleModalCenter">
+                Ver exemplo de código
+            </button>
+        </center>
+    
+    </div>
+
+  
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+        <div class="modal-dialog-centered modal-dialog modal-lg" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLongTitle">Exemplo</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+                </div>
+                <div class="modal-body">
+                    <center>
+                        <img src="../img/tiposDados.png" alt="" class="img-fluid" style="border-radius: 10px">
+                    </center>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    
+
+    <%- include("scripts"); -%>
+
+    <script>
+
+        let nome = "Eduardo"    //tipo String
+        let valorNum = 102      //tipo Number inteiro
+        let valorPI = 3.14      //tipo Number float
+        let ceuAzul = true      //tipo Boolean 'verdadeiro'
+        let vazio = null        //tipo Null - nulo
+        let varIndefinida       //tipo Undefined
+
+    </script>
+
+
+
+</body>
+</html>
